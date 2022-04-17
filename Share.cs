@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,35 +9,36 @@ namespace Sorting_Program
 {
 	public class Share
 	{
-		int[] sharesList = new shareList[] { };
-		string strShares = "";
-		int intShares;
-
-		public List<string> Shares()
+		public int[] SharesFiles()
 		{
-			try
-			{
-				string strShares = File.ReadAllText("Share_1_256.txt")
-				bool isParsable = int32.TryParse(strShares, out intShares);
-
-				if 
-					{
-					(isParsable)
-						this.sharesList.Add(intshares);
-					return sharesList;
-				}
-
-				else
-					{ 
-					Console.WriteLine("Could not be parsed.");
-					}
-			}
-			catch
+			string path = "Share_1_256.txt";
+			List<int> sharesList = new List<int>();
+			string[] readFile = File.ReadAllLines(path);
+			foreach (string line in readFile)
             {
-				Console.WriteLine("File could not be found");
-				Environment.Exit(0);
-				return null;
+                try
+                {
+					sharesList.Add(int.Parse(line));
+					
+                }
+				catch (FormatException)
+                {
+					Console.WriteLine("Unable to convert line.");
+                }
+                catch (OverflowException)
+                {
+					Console.WriteLine("Value out of int32 type range.");
+                }
             }
+			int[] sharesArray = sharesList.ToArray();
+			return sharesArray;
+
+
+
+
+
+
+			
 		}
 	}
 }
