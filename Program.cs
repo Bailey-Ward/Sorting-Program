@@ -25,8 +25,9 @@ namespace Sorting_Program
                 {
                     emptyArray = share.SharesFiles();
                     sort.BubbleSort(emptyArray);
-              
-                    
+                    printArray.Print(emptyArray);
+
+
                     break;
                 }
                 else if (choice == "2")
@@ -49,7 +50,7 @@ namespace Sorting_Program
                 }
 
             }
-            printArray.Print(emptyArray);
+
 
         }
     }
