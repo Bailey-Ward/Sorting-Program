@@ -9,7 +9,7 @@ namespace Sorting_Program
 {
 	public class Share
 	{
-		public int[] SharesFiles()
+		public int[] SharesFiles_1_256()
 		{
 			string path = Directory.GetCurrentDirectory();
 			string newpath = Path.GetFullPath(Path.Combine(path, @"..\..\","Share_1_256.txt"));
@@ -33,13 +33,6 @@ namespace Sorting_Program
             }
 			int[] sharesArray = sharesList.ToArray();
 			return sharesArray;
-
-
-
-
-
-
-			
 		}
 	}
 }

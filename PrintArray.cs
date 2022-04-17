@@ -11,5 +11,6 @@ namespace Sorting_Program
                 Console.Write(sharesList[i]+ " ");
             Console.WriteLine();
         }
+
     }
 }

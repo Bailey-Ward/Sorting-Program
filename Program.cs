@@ -19,15 +19,14 @@ namespace Sorting_Program
 
             while (true)
             {
-                Console.WriteLine("Type 1 to select bubble sort:\n Type 2 to select merge sort:\n Type 3 to select quick sort:\n Type 4 to exit the program:");
+                Console.WriteLine("Type 1 to select bubble sort:\nType 2 to select merge sort:\nType 3 to select quick sort:\nType 4 to exit the program:\n");
                 string choice = Console.ReadLine();
+                Console.WriteLine("------------------------------------------------------------------------------------");
                 if (choice == "1")
                 {
-                    emptyArray = share.SharesFiles();
+                    emptyArray = share.SharesFiles_1_256();
                     sort.BubbleSort(emptyArray);
                     printArray.Print(emptyArray);
-
-
                     break;
                 }
                 else if (choice == "2")
