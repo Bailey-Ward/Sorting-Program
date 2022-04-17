@@ -11,8 +11,8 @@ namespace Sorting_Program
 	{
 		public int[] SharesFiles()
 		{
-			string path = @"C:\Folder1\Folder2\Folder3\Folder4";
-			string newpath = Path.GetFullPath(Path.Combine(path,@"..\..\"));
+			string path = Directory.GetCurrentDirectory();
+			string newpath = Path.GetFullPath(Path.Combine(path, @"..\..\","Share_1_256.txt"));
 			List<int> sharesList = new List<int>();
 			string[] readFile = File.ReadAllLines(newpath);
 			foreach (string line in readFile)

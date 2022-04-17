@@ -50,6 +50,7 @@ namespace Sorting_Program
                 }
 
             }
+            Console.ReadLine();
 
 
         }
