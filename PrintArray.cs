@@ -7,7 +7,8 @@ namespace Sorting_Program
         public void PrintAscending(int[] sharesList)
         {
             int n = sharesList.Length;
-            for (int i = 0; i < n; i++)
+            Console.WriteLine("10th values sorted ascending:");
+            for (int i = 9; i < n; i += 10)
             {
                 Console.Write(sharesList[i] + " ");
             }
@@ -16,9 +17,9 @@ namespace Sorting_Program
 
         public void PrintDescending(int[] sharesList)
         {
-            int n = sharesList.Length - 1;
-
-            for (int i = n; i >= 0; i--)
+            int n = sharesList.Length;
+            Console.WriteLine("10th values sorted descending:");
+            for (int i = n-9; i >= 0; i -= 10)
             {
                 Console.Write(sharesList[i] + " ");
 
