@@ -4,7 +4,7 @@ namespace Sorting_Program
 {
     public class PrintArray
     {
-        public void PrintAscending(int[] sharesList)
+        public void PrintAscending256(int[] sharesList)
         {
             int n = sharesList.Length;
             Console.WriteLine("10th values sorted ascending:");
@@ -15,7 +15,7 @@ namespace Sorting_Program
             Console.WriteLine();
         }
 
-        public void PrintDescending(int[] sharesList)
+        public void PrintDescending256(int[] sharesList)
         {
             int n = sharesList.Length;
             Console.WriteLine("10th values sorted descending:");
@@ -26,6 +26,30 @@ namespace Sorting_Program
             }
             Console.WriteLine("\n");
 
+        }
+
+        public void PrintAscending2048(int[] shareList)
+        {
+            int n = shareList.Length;
+            Console.WriteLine("50th values sorted ascending:");
+            for (int i = 49;i < n; i += 50)
+            {
+                Console.Write(shareList[i] + " ");
+
+            }
+            Console.WriteLine("\n");
+        }
+
+        public void PrintDescending2048(int[] shareList)
+        {
+            int n = shareList.Length;
+            Console.WriteLine("50th values sorted descending:");
+            for (int i = n- 49; i >= n; i -= 50)
+            {
+                Console.Write(shareList[i] + " ");
+
+            }
+            Console.WriteLine("\n");
         }
     }
 }

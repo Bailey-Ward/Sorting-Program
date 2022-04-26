@@ -6,8 +6,8 @@ namespace Sorting_Program
     {
         public int BubbleSort(int[] sharesArray)
         {
-            int counter = 0;
-            int n = sharesArray.Length;
+            int counter = 0; //sets counter to 0
+            int n = sharesArray.Length; //sets length of array
             for (int i = 0; i < n - 1; i++)
                 for(int j = 0; j < n - i - 1; j++)
                     if(sharesArray[j] > sharesArray[j + 1])
