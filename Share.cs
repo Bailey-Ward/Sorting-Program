@@ -13,27 +13,27 @@ namespace Sorting_Program
 		{
 
 			string path = Directory.GetCurrentDirectory();
-			string newpath = Path.GetFullPath(Path.Combine(path, @"..\..\","Share_1_256.txt"));
-			List<int> sharesList = new List<int>();
+			string newpath = Path.GetFullPath(Path.Combine(path, @"..\..\","Share_1_256.txt")); //sets directory and name for files to be read from
+			List<int> sharesList = new List<int>(); //list for storing values
 			string[] readFile = File.ReadAllLines(newpath);
-			foreach (string line in readFile)
+			foreach (string line in readFile) //reads each line in the file
             {
                 try
                 {
-					sharesList.Add(int.Parse(line));
+					sharesList.Add(int.Parse(line)); //parses each line into an integer and adds it to the list
 					
                 }
-				catch (FormatException)
+				catch (FormatException) //error in case line cannot be parsed
                 {
 					Console.WriteLine("Unable to convert line.");
                 }
-                catch (OverflowException)
+                catch (OverflowException) //error handling in case value is out of range
                 {
 					Console.WriteLine("Value out of int32 type range.");
                 }
             }
-			int[] sharesArray = sharesList.ToArray();
-			return sharesArray;
+			int[] sharesArray = sharesList.ToArray(); //turns list into an array
+			return sharesArray; //returns the array
 		}
 
 		public int[] SharesFiles_2_256()
