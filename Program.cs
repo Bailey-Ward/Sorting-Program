@@ -285,7 +285,7 @@ namespace Sorting_Program
                     else if (shareChoice == "4")
                     {
                         emptyArray = share.SharesFiles_1_2048();
-                        sort.BubbleSort(emptyArray);
+                        sort.InsertionSort(emptyArray);
                         printArray.PrintAscending2048(emptyArray);
                         printArray.PrintDescending2048(emptyArray);
                         Console.WriteLine("Input the number you would like to search for in the sorted array?\n");
@@ -313,7 +313,7 @@ namespace Sorting_Program
                     else if (shareChoice == "5")
                     {
                         emptyArray = share.SharesFiles_2_2048();
-                        sort.BubbleSort(emptyArray);
+                        sort.InsertionSort(emptyArray);
                         printArray.PrintAscending2048(emptyArray);
                         printArray.PrintDescending2048(emptyArray);
                         Console.WriteLine("Input the number you would like to search for in the sorted array?\n");
@@ -341,7 +341,7 @@ namespace Sorting_Program
                     else if (shareChoice == "6")
                     {
                         emptyArray = share.SharesFiles_3_2048();
-                        sort.BubbleSort(emptyArray);
+                        sort.InsertionSort(emptyArray);
                         printArray.PrintAscending2048(emptyArray);
                         printArray.PrintDescending2048(emptyArray);
                         Console.WriteLine("Input the number you would like to search for in the sorted array?\n");
